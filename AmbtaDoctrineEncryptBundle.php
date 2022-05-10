@@ -15,7 +15,7 @@ class AmbtaDoctrineEncryptBundle extends Bundle {
         $container->addCompilerPass(new RegisterServiceCompilerPass(), PassConfig::TYPE_AFTER_REMOVING);
     }
     
-    public function getContainerExtension()
+    public function getContainerExtension(): ?ExtensionInterface
     {
         return new DoctrineEncryptExtension();
     }
